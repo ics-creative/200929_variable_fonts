@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            /*
+            * "Roboto-Flex" licensed under the SIL Open Font License
+            * https://github.com/TypeNetwork/Roboto-Flex
+            */
+            @font-face {
+                font-family: "Roboto Flex";
+                src: url("./fonts/RobotoFlex[slnt,wdth,wght,opsz].ttf") format("truetype");
+                font-weight: 100 1000;
+                font-stretch: 25% 151%;
+            }
+            :root{
+                --wght: 400;
+                --wdth: 100;
+                --GRAD: 1;
+            }
+            p {
+                font-size: 48px;
+                font-family: "Roboto Flex", sans-serif;
+                font-variation-settings: "wght" var(--wght), "wdth" var(--wdth), "GRAD" var(--GRAD);
+                animation: width-animation 1s ease infinite alternate;
+            }
+            @keyframes width-animation {
+                from { font-variation-settings: "wght" var(--wght), "wdth" 50, "GRAD" var(--GRAD); }
+                to   { font-variation-settings: "wght" var(--wght), "wdth" 151, "GRAD" var(--GRAD); }
+            }
+        </style>
+    </head>
+    <body>
+        <p id="text">hello world</p>
+    </body>
+</html>
